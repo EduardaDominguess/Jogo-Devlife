@@ -11,7 +11,7 @@ body{
     color: #444;
   
   }
-  
+
   ol, ul {
     margin: 0 0 50px 0;
   }
@@ -55,4 +55,15 @@ body{
   
 .box{
   margin-left: 20px;
+}
+
+.quadrado {
+  height: 150px;
+  width: 650px;
+  margin: 10px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
