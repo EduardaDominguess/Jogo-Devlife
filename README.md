@@ -10,9 +10,9 @@ O flappy Insper se passa em um universo paralelo em que a Faculdade "Insper" fal
 
 ## **Instruções para jogar o jogo**
 1. Clique em qualquer tecla;
-2. Como o mouse de o primeiro clique quando estiver pronto para começar;
+2. Quando estiver preparado, de o primeiro clique com o mouse;
 3. Mantenha o professor voando, e sem bater nos prédios ou nas extremidades;
-4. Acumule o máximo de pontos possíveis;
+4. A cada obstaculo você acumula 1 ponto;
 5. Ao bater nos prédios, ou nas extremidades você perde e jogada, mas pode iniciar uma nova;
 6. Boa sorte!
 
