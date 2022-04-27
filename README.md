@@ -8,6 +8,14 @@ O flappy Insper se passa em um universo paralelo em que a Faculdade "Insper" fal
 3. Rode o arquivo 'RODAR.py'
 4. Comece a jogar!
 
+## **Instruções para jogar o jogo**
+1. Clique em qualquer tecla;
+2. Quando estiver preparado, de o primeiro clique com o mouse;
+3. Mantenha o professor voando, e sem bater nos prédios ou nas extremidades;
+4. A cada obstaculo você acumula 1 ponto;
+5. Ao bater nos prédios, ou nas extremidades você perde e jogada, mas pode iniciar uma nova;
+6. Boa sorte!
+
 ## **Grupo**:
 - Eduarda Paiva Domingues 
 - Eduardo Schneider Monteiro de Barros
