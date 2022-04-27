@@ -14,7 +14,7 @@ def game_screen(window):
     # Tela Principal
     window = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption('Delivering Food')
-    icon = pygame.image.load('Assets/img/Toshi.png')
+    icon = pygame.image.load('./Assets/img/Toshi.png')
     pygame.display.set_icon(icon)
 
     # Inicia assets 
