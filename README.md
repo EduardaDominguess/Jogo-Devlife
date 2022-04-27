@@ -5,10 +5,8 @@ O flappy Insper se passa em um universo paralelo em que a Faculdade "Insper" fal
 ## **Instruções para executar o jogo**
 1. Faça o download do arquivo (zip)
 2. Abra a pasta clonada em um editor de código.
-3. Rode o arquivo 'jogo.py'
+3. Rode o arquivo 'RODAR.py'
 4. Comece a jogar!
-
-## **Vídeo explicativo**
 
 ## **Grupo**:
 - Eduarda Paiva Domingues 
