@@ -15,21 +15,21 @@ class moto(pygame.sprite.Sprite):
         self.pulo = False
 
     def update(self):
-        #Gravidade
+        # Gravity
         self.vel += 0.5
         if self.vel>8:
             self.vel = 8
         if self.rect.bottom<HEIGHT :
             self.rect.y += int(self.vel)
 
-        #Pular
+        # Jump
         if pygame.mouse.get_pressed()[0] == 1 and self.pulo == False:
             self.pulo = True
             self.vel = -10
         if pygame.mouse.get_pressed()[0] == 0 and self.pulo == False:
             self.pulo = False
 
-        # Mantem dentro da tela
+        # Mantém dentro da tela
         if self.rect.right > WIDTH:
             self.rect.right = WIDTH
         if self.rect.left < 0:
@@ -50,4 +50,3 @@ class predio(pygame.sprite.Sprite):
 
     def update(self):
         self.rect.x -= 4
-
