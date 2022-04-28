@@ -44,11 +44,11 @@ def load_assets():
     assets[TELAGAMEOVER] = pygame.transform.scale(assets['tela_gameover'], (WIDTH, HEIGHT))
     
 
-    # Carrega os sons do jogo
+    # Audios
     pygame.mixer.music.load(os.path.join(SND_DIR, 'soundtrack.mp3'))
     pygame.mixer.music.set_volume(0.4)
     assets[POINT_SOUND] = pygame.mixer.Sound(os.path.join(SND_DIR, 'point.wav'))
     
-    # Carrega fonte
+    # Fonte
     assets[SCORE_FONT] = pygame.font.Font(os.path.join(FNT_DIR, 'PressStart2P.ttf'), 35)
-    return assets
+    return 
