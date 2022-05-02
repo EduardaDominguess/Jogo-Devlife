@@ -24,7 +24,7 @@ def init_screen(screen):
                 state = QUIT
                 running = False
 
-            if event.type == pygame.KEYUP:   #jey up no espaço do boneco
+            if event.type == pygame.KEYUP:
                 state = ESCOLHA
                 running = False
         # Redesenha o fundo 
@@ -34,4 +34,4 @@ def init_screen(screen):
         # Depois do desenho inverte o display 
         pygame.display.flip()
 
-    return state   #return boneco tbm
+    return state 

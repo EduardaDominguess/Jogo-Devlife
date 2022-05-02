@@ -5,6 +5,7 @@ from pygame.locals import *
 from configuracoes import *
 from assets import *
 
+#função que detecta colisão do mouse com a imagem
 def colisao(ponto, r2):
     return r2.collidepoint(ponto)
 
@@ -87,4 +88,4 @@ def tela_selecao(screen: pygame.Surface):
 
         pygame.display.flip()
 
-    return state, personagem  #return boneco tbm
+    return state, personagem
