@@ -5,6 +5,7 @@ from configuracoes import *
 
 
 def init_screen(screen):
+    #Velocidade
     clock = pygame.time.Clock()
 
     background = pygame.image.load(path.join(IMG_DIR, 'First_screen.png')).convert_alpha()
@@ -13,7 +14,7 @@ def init_screen(screen):
 
     running = True
     while running:
-
+        # Vel do jogo
         clock.tick(FPS)
 
         for event in pygame.event.get():
@@ -24,10 +25,11 @@ def init_screen(screen):
             if event.type == pygame.KEYUP:
                 state = GAME
                 running = False
-
+        # Redesenha o fundo 
         screen.fill(BLACK)
         screen.blit(background_set, background_rect)
 
+        # Depois do desenho inverte o display 
         pygame.display.flip()
 
     return state
