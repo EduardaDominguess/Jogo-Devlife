@@ -86,7 +86,7 @@ def tela_selecao(screen: pygame.Surface):
         screen.blit(assets['moto_grazi'],(200,450))
         screen.blit(assets['moto_fabricio'],(400,450))
         screen.blit(assets['moto_igor'],(600,450))
-        screen.blit(assets['moto_igor'],(800,400))
+        screen.blit(assets['moto_marcos'],(800,400))
 
         pygame.display.flip()
 
