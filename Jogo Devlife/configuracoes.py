@@ -9,15 +9,21 @@ WIDTH = 1024
 HEIGHT = 768 
 FPS = 60 # Frames por segundo
 
+# Dados gerais do jogo.
 MOTO_WIDTH = 70
 MOTO_HEIGHT = 70
 GETREADY_WIDTH = 280
 GETREADY_HEIGHT = 293
 
+# Define algumas variáveis com as cores básicas
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+YELLOW = (255, 255, 0)
 
+# Constantes
 INIT = 0
 GAME = 1
 QUIT = 2
