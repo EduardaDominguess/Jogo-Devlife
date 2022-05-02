@@ -98,11 +98,11 @@ def game_screen(window):
                     self.click = False
 
 
-    sailor_group = pygame.sprite.Group()
+    moto_group = pygame.sprite.Group()
 
     # Posição na tela
     p = moto(200, int(HEIGHT / 2))
-    sailor_group.add(p)
+    moto_group.add(p)
 
     class predio(pygame.sprite.Sprite):
         def __init__(self, x, y, posicao):
@@ -165,16 +165,16 @@ def game_screen(window):
 
         predio_group.draw(window) # Prédio    
 
-        sailor_group.draw(window) #Personagem
-        sailor_group.update() 
+        moto_group.draw(window) #Personagem
+        moto_group.update() 
         
         # Pontos
         if len(predio_group) > 0:
-            if sailor_group.sprites()[0].rect.left > predio_group.sprites()[0].rect.left\
-                and sailor_group.sprites()[0].rect.right < predio_group.sprites()[0].rect.right and pass_predio == False:
+            if moto_group.sprites()[0].rect.left > predio_group.sprites()[0].rect.left\
+                and moto_group.sprites()[0].rect.right < predio_group.sprites()[0].rect.right and pass_predio == False:
                 pass_predio = True
             if pass_predio == True:
-                if sailor_group.sprites()[0].rect.left > predio_group.sprites()[0].rect.right:
+                if moto_group.sprites()[0].rect.left > predio_group.sprites()[0].rect.right:
                     score += 1
                     assets['point_sound'].play()
                     pass_predio = False
@@ -182,7 +182,7 @@ def game_screen(window):
         # Pontos na tela
         draw_text(str(score), assets['score_font'], WHITE, int(WIDTH / 2), 20)
 
-        if pygame.sprite.groupcollide(sailor_group, predio_group, False, False) or p.rect.top < 0: 
+        if pygame.sprite.groupcollide(moto_group, predio_group, False, False) or p.rect.top < 0: 
             game_over = True
 
         if p.rect.bottom >= 768:
