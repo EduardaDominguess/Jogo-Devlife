@@ -32,6 +32,8 @@ def game_screen(window, personagem):
     assets['moto_grazi'] = pygame.transform.scale(assets['moto_grazi'], (70, 70))
     assets['moto_miranda'] = pygame.image.load('Assets/img/Miranda.png').convert_alpha()
     assets['moto_miranda'] = pygame.transform.scale(assets['moto_miranda'], (70, 70))
+    assets['moto_marcos'] = pygame.image.load('Assets/img/Marcos.png').convert_alpha()
+    assets['moto_marcos'] = pygame.transform.scale(assets['moto_marcos'], (70, 70))
     assets['predio'] = pygame.image.load('assets/img/predio.png').convert_alpha()
     assets['button'] = pygame.image.load('assets/img/button.png')
     assets['get_ready'] = pygame.image.load('assets/img/getready.png').convert_alpha()

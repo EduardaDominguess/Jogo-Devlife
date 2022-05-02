@@ -29,6 +29,8 @@ def tela_selecao(screen: pygame.Surface):
     assets['moto_grazi'] = pygame.transform.scale(assets['moto_grazi'], (150, 150))
     assets['moto_miranda'] = pygame.image.load('Assets/img/Miranda.png').convert_alpha()
     assets['moto_miranda'] = pygame.transform.scale(assets['moto_miranda'], (150, 150))
+    assets['moto_marcos'] = pygame.image.load('Assets/img/Marcos.png').convert_alpha()
+    assets['moto_marcos'] = pygame.transform.scale(assets['moto_marcos'], (150, 150))
 
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
