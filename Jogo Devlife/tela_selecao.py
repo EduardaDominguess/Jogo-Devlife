@@ -76,6 +76,10 @@ def tela_selecao(screen: pygame.Surface):
                 state = GAME
                 personagem = 'moto_igor'
                 running = False
+            if event.type == pygame.MOUSEBUTTONDOWN and colisao(mouse,Rect(800,450,150,150)) == True:
+                state = GAME
+                personagem = 'moto_igor'
+                running = False
 
         screen.blit(background_set, background_rect)
         screen.blit(assets['moto_barbara'],(200,300))
