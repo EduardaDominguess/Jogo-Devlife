@@ -5,6 +5,7 @@ from configuracoes import *
 
 
 def init_screen(screen):
+    #Velocidade
     clock = pygame.time.Clock()
     pygame.display.set_caption('Delivering Food')
     icon = pygame.image.load('./Assets/img/Toshi.png')
@@ -15,7 +16,7 @@ def init_screen(screen):
 
     running = True
     while running:
-
+        # Vel do jogo
         clock.tick(FPS)
 
         for event in pygame.event.get():
@@ -26,10 +27,11 @@ def init_screen(screen):
             if event.type == pygame.KEYUP:   #jey up no espaço do boneco
                 state = ESCOLHA
                 running = False
-
+        # Redesenha o fundo 
         screen.fill(BLACK)
         screen.blit(background_set, background_rect)
 
+        # Depois do desenho inverte o display 
         pygame.display.flip()
 
     return state   #return boneco tbm

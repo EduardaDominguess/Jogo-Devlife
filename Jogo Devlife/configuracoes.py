@@ -12,8 +12,8 @@ FPS = 60 # Frames por segundo
 # Dados gerais do jogo.
 MOTO_WIDTH = 70
 MOTO_HEIGHT = 70
-GETREADY_WIDTH = 280
-GETREADY_HEIGHT = 293
+GETREADY_WIDTH = 300
+GETREADY_HEIGHT = 400
 
 # Define algumas variáveis com as cores básicas
 WHITE = (255, 255, 255)

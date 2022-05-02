@@ -42,9 +42,11 @@ class predio(pygame.sprite.Sprite):
         self.image = pygame.image.load('Assets/img/predio.png').convert_alpha()
         self.mask = pygame.mask.from_surface(self.image)
         self.rect = self.image.get_rect()
+        # Prédio vindo de cima
         if posicao == 1:
             self.image = pygame.transform.flip(self.image, False, True)
             self.rect.topleft = [x, y + int(400/2)]
+        # Prédio vindo debaixo
         if posicao == -1:
             self.rect.bottomleft = [x, y + int(400/2)]
 
