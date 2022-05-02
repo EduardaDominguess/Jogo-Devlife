@@ -1,8 +1,9 @@
 
 import pygame
-from configuracoes import WIDTH, HEIGHT, INIT, GAME, QUIT
+from configuracoes import * 
 from tela_inicial import init_screen
 from tela_jogo import game_screen
+from tela_selecao import tela_selecao
 
 
 pygame.init()
@@ -13,10 +14,12 @@ pygame.display.set_caption('Delivering Food')
 
 state = INIT
 while state != QUIT:
-    if state == INIT:
+    if state == ESCOLHA:
+        state, personagem = tela_selecao(window)
+    elif state == INIT:
         state = init_screen(window)
     elif state == GAME:
-        state = game_screen(window)
+        state = game_screen(window, personagem)
     else:
         state = QUIT
 

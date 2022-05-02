@@ -25,5 +25,6 @@ YELLOW = (255, 255, 0)
 
 # Constantes
 INIT = 0
-GAME = 1
-QUIT = 2
+ESCOLHA = 1
+GAME = 2
+QUIT = 3
