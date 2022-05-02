@@ -60,10 +60,10 @@ def game_screen(window):
         img = assets[SCORE_FONT].render(text, True, text_color)
         window.blit(img, (x, y))
 
-    # Resetar
+    # Restart
     def restart():
         predio_group.empty()
-        p.rect.x = 200
+        p.rect.x = 170
         p.rect.y = int(HEIGHT / 2)
         score = 0
         return score
@@ -165,7 +165,7 @@ def game_screen(window):
 
         predio_group.draw(window) # Prédio    
 
-        moto_group.draw(window) #Personagem
+        moto_group.draw(window) #Moto
         moto_group.update() 
         
         # Pontos
@@ -190,7 +190,7 @@ def game_screen(window):
             voando = False
 
         if game_over == False and voando == True: 
-            # New prédios
+            # Add prédios
             time_now = pygame.time.get_ticks()
             if time_now - last_predio > freq_predio:
                 altura_canhao = random.randint(-100, 100)
