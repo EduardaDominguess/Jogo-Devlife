@@ -4,9 +4,10 @@ import random
 from pygame.locals import *
 from configuracoes import *
 from assets import *
+from tela_selecao import *
 
 
-def game_screen(window):
+def game_screen(window, personagem):
 
     pygame.init()
     pygame.mixer.init()
@@ -70,9 +71,9 @@ def game_screen(window):
 
 
     class moto(pygame.sprite.Sprite):
-        def __init__(self, x, y):
+        def __init__(self, x, y, professor):
             pygame.sprite.Sprite.__init__(self)
-            self.image = assets['moto_barbara']
+            self.image = assets[professor]
             self.mask = pygame.mask.from_surface(self.image)
             self.rect = self.image.get_rect()
             self.rect.center = [x, y]
@@ -101,7 +102,7 @@ def game_screen(window):
     moto_group = pygame.sprite.Group()
 
     # Posição na tela
-    p = moto(200, int(HEIGHT / 2))
+    p = moto(200, int(HEIGHT / 2), personagem)
     moto_group.add(p)
 
     class predio(pygame.sprite.Sprite):
