@@ -46,6 +46,7 @@ def game_screen(window):
     # Fonte
     assets['score_font'] = pygame.font.Font(('assets/fontes/PressStart2P.ttf'), 28)
 
+    # Variáveis
     mov_fundo = 0 
     vel_fundo = 4 
     voando = False
@@ -126,6 +127,7 @@ def game_screen(window):
             if self.rect.right < 0:
                 self.kill() 
 
+    # Cria sprite para os prédios
     predio_group = pygame.sprite.Group()
 
     class Button():
@@ -138,21 +140,24 @@ def game_screen(window):
             action = False
             
             posicao = pygame.mouse.get_pos()
-
+            
+            # Check se mouse ta em cima dp botão 
             if self.rect.collidepoint(posicao):
-                if pygame.mouse.get_pressed()[0] == 1: 
+                if pygame.mouse.get_pressed()[0] == 1:  # Se foi pressionado o botão
                     action = True
 
-
+            # Desenha botão
             window.blit(self.image, (self.rect.x, self.rect.y))
             return action
 
+    # Posição botão na tela
     button = Button((WIDTH / 2) - 50, (HEIGHT / 2) - 100, assets['button'])
 
 
 
     game = True
 
+    #FPS
     clock = pygame.time.Clock()
     FPS = 60
 
@@ -182,10 +187,12 @@ def game_screen(window):
         # Pontos na tela
         draw_text(str(score), assets['score_font'], WHITE, int(WIDTH / 2), 20)
 
+        # Se bateu no teto/predios
         if pygame.sprite.groupcollide(moto_group, predio_group, False, False) or p.rect.top < 0: 
             game_over = True
 
-        if p.rect.bottom >= 768:
+        # Se bateu no chão
+        if p.rect.bottom >= 800:
             game_over = True
             voando = False
 
@@ -200,15 +207,19 @@ def game_screen(window):
                 predio_group.add(canhao_cima)
                 last_predio = time_now
 
+
+            # Movimento fundo
             mov_fundo -= vel_fundo 
             if abs(mov_fundo) > 2048:
                 mov_fundo = 0   
 
             predio_group.update()
-
+         
+        # Desenha o get ready
         if game_over == False and voando == False:
             window.blit(assets['get_ready'], (400, 215))                             
-
+        
+        # Game over
         if game_over == True:
             window.blit(assets['tela_gameover'], (0,0)) 
             draw_text(str(score), assets['score_font'], WHITE, int(WIDTH/2) + 160, 708) 
@@ -216,6 +227,7 @@ def game_screen(window):
                 game_over = False
                 score = restart()
 
+        # Se moto começa a voar
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 game = False
