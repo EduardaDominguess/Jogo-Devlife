@@ -1,8 +1,7 @@
 
 import pygame
 from configuracoes import * 
-from tela_inicial import init_screen
-from tela_jogo import game_screen
+from tela_jogo import *
 from tela_selecao import tela_selecao
 
 
