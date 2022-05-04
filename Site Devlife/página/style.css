@@ -53,6 +53,7 @@ body{
   
   }
 .zip {
+  font-size: 13px;
   margin-left: 4rem;
   margin-right: 68rem;
   background-color: rgb(201, 199, 199);
@@ -60,6 +61,8 @@ body{
   border-radius: 4px;
   display: inline-block;
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 .zip:hover{
   background:rgb(199, 91, 91);
