@@ -1,4 +1,4 @@
-# Importando bibliotecas
+# Importando as bibliotecas necessárias.
 import pygame
 import random
 from pygame.locals import *
@@ -6,7 +6,40 @@ from configuracoes import *
 from assets import *
 from tela_selecao import *
 
+def init_screen(screen):
+    # Variável para o ajuste de velocidade
+    clock = pygame.time.Clock()
+    # Nome do jogo
+    pygame.display.set_caption('Delivering Food')
+    # Icone da página do pygame
+    icon = pygame.image.load('./Assets/img/Toshi.png')
+    pygame.display.set_icon(icon)
+    # Background
+    background = pygame.image.load(path.join(IMG_DIR, 'First_screen.png')).convert_alpha()
+    background_set = pygame.transform.scale(background, (WIDTH,HEIGHT))
+    background_rect = background.get_rect()
 
+    running = True
+    while running:
+        # Vel do jogo
+        clock.tick(FPS)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                state = QUIT
+                running = False
+
+            if event.type == pygame.KEYUP:
+                state = ESCOLHA
+                running = False
+        # A cada loop, redesenha o fundo e os sprites
+        screen.fill(BLACK)
+        screen.blit(background_set, background_rect)
+
+        # Depois de desenhar tudo, inverte o display.
+        pygame.display.flip()
+
+    return state 
 def game_screen(window, personagem):
 
     pygame.init()
@@ -18,6 +51,7 @@ def game_screen(window, personagem):
     icon = pygame.image.load('./Assets/img/Toshi.png')
     pygame.display.set_icon(icon)
 
+    # Carrega todos os assets de uma vez.
     assets = {}
     assets['background'] = pygame.image.load('assets/img/fundo.png').convert()
     assets['moto_barbara'] = pygame.image.load('Assets/img/Barbara.png').convert_alpha()
@@ -32,6 +66,8 @@ def game_screen(window, personagem):
     assets['moto_grazi'] = pygame.transform.scale(assets['moto_grazi'], (70, 70))
     assets['moto_miranda'] = pygame.image.load('Assets/img/Miranda.png').convert_alpha()
     assets['moto_miranda'] = pygame.transform.scale(assets['moto_miranda'], (70, 70))
+    assets['moto_marcos'] = pygame.image.load('Assets/img/Marcos.png').convert_alpha()
+    assets['moto_marcos'] = pygame.transform.scale(assets['moto_marcos'], (70, 70))
     assets['predio'] = pygame.image.load('assets/img/predio.png').convert_alpha()
     assets['button'] = pygame.image.load('assets/img/button.png')
     assets['get_ready'] = pygame.image.load('assets/img/getready.png').convert_alpha()
@@ -39,15 +75,15 @@ def game_screen(window, personagem):
     assets['tela_gameover'] = pygame.image.load('assets/img/telagameover.png').convert()
     assets['tela_gameover'] = pygame.transform.scale(assets['tela_gameover'], (WIDTH, HEIGHT))
 
-    # Audios
+    # Carrega assets
     pygame.mixer.music.load('assets/audios/soundtrack.mp3')
     pygame.mixer.music.set_volume(0.3)
     assets['point_sound'] = pygame.mixer.Sound('assets/audios/point.wav')
 
-    # Fonte
+    # Carrega assets
     assets['score_font'] = pygame.font.Font(('assets/fontes/PressStart2P.ttf'), 28)
 
-    # Variáveis
+    # estados possíveis do jogador
     mov_fundo = 0 
     vel_fundo = 4 
     voando = False
@@ -158,13 +194,13 @@ def game_screen(window, personagem):
 
     game = True
 
-    #FPS
+    # Variável para o ajuste de velocidade
     clock = pygame.time.Clock()
     FPS = 60
 
     pygame.mixer.music.play(loops=-1)
     while game:
-
+        # Ajusta a velocidade do jogo.
         clock.tick(FPS)
 
         window.blit(assets['background'], (mov_fundo, 0)) # Fundo

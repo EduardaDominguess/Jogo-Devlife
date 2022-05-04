@@ -1,3 +1,4 @@
+# Importando as bibliotecas necessárias.
 import pygame
 import random
 from os import path
@@ -29,6 +30,8 @@ def tela_selecao(screen: pygame.Surface):
     assets['moto_grazi'] = pygame.transform.scale(assets['moto_grazi'], (150, 150))
     assets['moto_miranda'] = pygame.image.load('Assets/img/Miranda.png').convert_alpha()
     assets['moto_miranda'] = pygame.transform.scale(assets['moto_miranda'], (150, 150))
+    assets['moto_marcos'] = pygame.image.load('Assets/img/Marcos.png').convert_alpha()
+    assets['moto_marcos'] = pygame.transform.scale(assets['moto_marcos'], (150, 150))
 
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
@@ -88,7 +91,7 @@ def tela_selecao(screen: pygame.Surface):
         screen.blit(assets['moto_grazi'],(200,450))
         screen.blit(assets['moto_fabricio'],(400,450))
         screen.blit(assets['moto_igor'],(600,450))
-        screen.blit(assets['moto_igor'],(800,400))
+        screen.blit(assets['moto_marcos'],(800,400))
 
         pygame.display.flip()
 

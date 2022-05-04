@@ -1,3 +1,4 @@
+# Importando as bibliotecas necessárias.
 import pygame
 import os
 from configuracoes import *
@@ -5,21 +6,22 @@ from configuracoes import *
  
 BACKGROUND = 'background'
 PREDIO = 'predio'
-MOTO_BARBARA = 'moto_barbara'
-MOTO_TOSHI = 'moto_toshi'
-MOTO_FABRICIO = 'moto_fabricio'
-MOTO_IGOR = 'moto_igor'
-MOTO_GRAZI = 'moto_grazi'
-MOTO_MIRANDA = 'moto_miranda'
 BUTTON = 'button'
 GETREADY = 'get_ready'
 SCORE_FONT = 'score_font'
 POINT_SOUND = 'point_sound'
 SCORE_FONT = 'score_font'
 TELAGAMEOVER = 'tela_gameover'
+MOTO_BARBARA = 'moto_barbara'
+MOTO_TOSHI = 'moto_toshi'
+MOTO_FABRICIO = 'moto_fabricio'
+MOTO_IGOR = 'moto_igor'
+MOTO_GRAZI = 'moto_grazi'
+MOTO_MIRANDA = 'moto_miranda'
+MOTO_MARCOS = 'moto_marcos'
 
 
-
+# Carrega todos os assets de uma vez.
 def load_assets():
     assets = {}
     assets[BACKGROUND] = pygame.image.load(os.path.join(IMG_DIR, 'fundo.png')).convert()   
@@ -37,6 +39,8 @@ def load_assets():
     assets[MOTO_GRAZI] = pygame.transform.scale(assets['moto_grazi'], (75, 75))
     assets[MOTO_MIRANDA] = pygame.image.load(os.path.join(IMG_DIR, 'Miranda.png')).convert_alpha()
     assets[MOTO_MIRANDA] = pygame.transform.scale(assets['moto_miranda'], (75, 75))
+    assets[MOTO_MARCOS] = pygame.image.load(os.path.join(IMG_DIR, 'Marcos.png')).convert_alpha()
+    assets[MOTO_MARCOS] = pygame.transform.scale(assets['moto_marcos'], (75, 75))
     assets[BUTTON] = pygame.image.load(os.path.join(IMG_DIR, 'button.png')).convert()
     assets[GETREADY] = pygame.image.load(os.path.join(IMG_DIR, 'getready.png')).convert_alpha()
     assets[GETREADY] = pygame.transform.scale(assets['get_ready'], (600, 500))
