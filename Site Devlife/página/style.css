@@ -25,7 +25,6 @@ body{
     position: fixed;
     /* padding: 15px */
   }
-  
   article{
     min-height: 50vh;
     margin-bottom: 50px;
@@ -52,7 +51,18 @@ body{
     text-decoration: none;
   
   }
-  
+
+.zip {
+  margin-left: 7rem;
+  margin-right: 68rem;
+  padding: 0.1rem 0.1rem;
+  background-color: rgb(201, 199, 199);
+  border: none;
+  border-radius: 4px;
+}
+.zip:hover{
+  background:rgb(199, 91, 91);
+}
 .box{
   margin-left: 20px;
 }
