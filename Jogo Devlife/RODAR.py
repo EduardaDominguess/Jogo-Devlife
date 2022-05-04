@@ -1,10 +1,10 @@
-
+# Importando as bibliotecas necessárias.
 import pygame
 from configuracoes import * 
 from tela_jogo import *
 from tela_selecao import tela_selecao
 
-
+# Inicialização do Pygame.
 pygame.init()
 pygame.mixer.init()
 

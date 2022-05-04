@@ -1,3 +1,4 @@
+# Importando as bibliotecas necessárias.
 import pygame
 import os
 from configuracoes import *
@@ -5,6 +6,12 @@ from configuracoes import *
  
 BACKGROUND = 'background'
 PREDIO = 'predio'
+BUTTON = 'button'
+GETREADY = 'get_ready'
+SCORE_FONT = 'score_font'
+POINT_SOUND = 'point_sound'
+SCORE_FONT = 'score_font'
+TELAGAMEOVER = 'tela_gameover'
 MOTO_BARBARA = 'moto_barbara'
 MOTO_TOSHI = 'moto_toshi'
 MOTO_FABRICIO = 'moto_fabricio'
@@ -12,15 +19,9 @@ MOTO_IGOR = 'moto_igor'
 MOTO_GRAZI = 'moto_grazi'
 MOTO_MIRANDA = 'moto_miranda'
 MOTO_MARCOS = 'moto_marcos'
-BUTTON = 'button'
-GETREADY = 'get_ready'
-SCORE_FONT = 'score_font'
-POINT_SOUND = 'point_sound'
-SCORE_FONT = 'score_font'
-TELAGAMEOVER = 'tela_gameover'
 
 
-
+# Carrega todos os assets de uma vez.
 def load_assets():
     assets = {}
     assets[BACKGROUND] = pygame.image.load(os.path.join(IMG_DIR, 'fundo.png')).convert()   

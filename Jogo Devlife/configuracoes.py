@@ -1,3 +1,4 @@
+# Importando as bibliotecas necessárias.
 from os import path
 
 # Estabelece a pasta que contem as figuras e sons.
@@ -5,6 +6,7 @@ IMG_DIR = path.join(path.dirname(__file__), 'assets', 'img')
 SND_DIR = path.join(path.dirname(__file__), 'assets', 'audios')
 FNT_DIR = path.join(path.dirname(__file__), 'assets', 'fontes')
 
+# Dados gerais do jogo.
 WIDTH = 1024 
 HEIGHT = 768 
 FPS = 60 # Frames por segundo
@@ -23,7 +25,7 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 YELLOW = (255, 255, 0)
 
-# Constantes
+# Define estados possíveis do jogador
 INIT = 0
 ESCOLHA = 1
 GAME = 2

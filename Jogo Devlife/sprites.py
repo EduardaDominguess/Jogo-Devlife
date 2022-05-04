@@ -1,9 +1,11 @@
+# Importando as bibliotecas necessárias.
 import random
 import pygame
 from configuracoes import *
 from assets import *
 
 
+# Classe Jogador que representa os personagens
 class moto(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)

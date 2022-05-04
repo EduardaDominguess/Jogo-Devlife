@@ -1,3 +1,4 @@
+# Importando as bibliotecas necessárias.
 import pygame
 import random
 from os import path
