@@ -8,6 +8,7 @@ body{
     padding: 150px 40px 60px;
     height: 100%;
     color: #444;
+    background-color: pink;
   
   }
 
@@ -88,4 +89,24 @@ body{
   scroll-behavior: smooth;
 }
 
+.cabeçalho {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px;
+  border-style: solid;
+  border-color: black;
+}
 
+.img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap ;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.heurisitca {
+  text-decoration: underline;
+  font-size: 1.3rem;
+}
