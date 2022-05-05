@@ -178,7 +178,7 @@ def game_screen(window, personagem):
             
             posicao = pygame.mouse.get_pos()
             
-            # Check se mouse ta em cima dp botão 
+            # Check se mouse ta em cima do botão 
             if self.rect.collidepoint(posicao):
                 if pygame.mouse.get_pressed()[0] == 1:  # Se foi pressionado o botão
                     action = True
